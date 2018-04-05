@@ -14,5 +14,8 @@ class ActivityTest < Minitest::Test
     assert_equal ({}), activity.participants
   end
 
-
+  def test_that_there_is_a_name_and_how_much_they_paid_for_activity
+    activity = Activity.new("hiking")
+    assert_equal ({"hiking" => 15, "climbing" => 50}), activity.participants
+  end
 end
